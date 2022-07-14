@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GoalChecker : MonoBehaviour
 {
+	[SerializeField] private GameObject canvas;
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("Player"))
 		{
-			Debug.Log("Peyvendivin vaxti kecib");
+			canvas.SetActive(true);
 		}
 	}
 }
