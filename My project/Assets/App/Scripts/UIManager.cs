@@ -36,10 +36,6 @@ public class UIManager : MonoBehaviour
         canvasPause.SetActive(false);
         canvasGamePlay.SetActive(true);
     }
-    /*public void Mute()
-    {
-        
-    }*/
 
     /*public void Quit()
     {
