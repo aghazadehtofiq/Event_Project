@@ -37,8 +37,8 @@ public class UIManager : MonoBehaviour
         canvasGamePlay.SetActive(true);
     }
 
-    /*public void Quit()
+    public void Quit()
     {
-        Application.Quit
-    }*/
+        Application.Quit();
+    }
 }

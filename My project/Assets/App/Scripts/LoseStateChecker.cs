@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoseStateChecker : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class LoseStateChecker : MonoBehaviour
 			yield return new WaitForSeconds(3);
 			canvas.SetActive(false);
 			audioSource1.Play();
+			audioSource2.Stop();
+			SceneManager.LoadScene("Level 1");
 		}
 	}
 }

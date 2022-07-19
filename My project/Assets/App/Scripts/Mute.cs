@@ -7,33 +7,27 @@ public class Mute : MonoBehaviour
 {
     private Sprite soundOnImage;
     public Sprite soundOffImage;
-    public Toggle toggle;
+    public Button button;
     private bool isOn = true;
     public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        soundOnImage = toggle.image.sprite;
+        soundOnImage = button.image.sprite;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ToggleClicked()
+    public void Button()
     {
         if(isOn)
         {
-            toggle.image.sprite = soundOffImage;
+            button.image.sprite = soundOffImage;
             isOn = false;
             audioSource.mute = true;
         }
         else
         {
-            toggle.image.sprite = soundOnImage;
+            button.image.sprite = soundOnImage;
             isOn = true;
             audioSource.mute = false;
         }
