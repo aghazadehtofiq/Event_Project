@@ -5,29 +5,26 @@ using UnityEngine.UI;
 
 public class Mute : MonoBehaviour
 {
-    private Sprite soundOnImage;
+    public Sprite soundOnImage;
     public Sprite soundOffImage;
-    public Button button;
+    public Button button1;
+    public Button button2;
     private bool isOn = true;
     public AudioSource audioSource;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        soundOnImage = button.image.sprite;
-    }
 
     public void Button()
     {
         if(isOn)
         {
-            button.image.sprite = soundOffImage;
+            button1.image.sprite = soundOffImage;
+            button2.image.sprite = soundOffImage;
             isOn = false;
             audioSource.mute = true;
         }
         else
         {
-            button.image.sprite = soundOnImage;
+            button1.image.sprite = soundOnImage;
+            button2.image.sprite = soundOnImage;
             isOn = true;
             audioSource.mute = false;
         }
